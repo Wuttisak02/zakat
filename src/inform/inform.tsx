@@ -60,7 +60,6 @@ const Inform: React.FC = () => (
             <InputNumber style={{ width: "100%" }} />
           </Form.Item>
 
-          {/* เพิ่ม Form.Item อื่น ๆ ที่ต้องการในส่วนขวา */}
           <Form.Item
             label="Nationality"
             name="nationality"

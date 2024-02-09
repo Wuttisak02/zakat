@@ -11,11 +11,13 @@ import AccountInfoPage from "./views/AccountInfoPage";
 import CustomerInfoPage from "./views/CustomerInfoPage";
 import ReportInfoPage from "./views/ReportInfoPage";
 import IntegrationInfoPage from "./views/IntegrationInfoPage";
+import TableBasic from "./list/TableBasic";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Fragment>
       <Route path="/" element={<Root />}>
+        <Route path="/TableBasic" element={<TableBasic />} />
         <Route path="/accountInfo" element={<AccountInfoPage />}></Route>
         <Route path="/customerInfo" element={<CustomerInfoPage />}></Route>
         <Route path="/reportInfo" element={<ReportInfoPage />}></Route>
