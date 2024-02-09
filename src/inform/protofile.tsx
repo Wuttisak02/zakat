@@ -8,7 +8,7 @@ const Protofile: React.FC = () => {
         <div className="profileWrapper" style={profileWrapperStyle}>
           <img
             id="profileImage"
-            src="https://i.pinimg.com/originals/17/0a/db/170adbda4075701931a726178b30f3b5.jpg"
+            src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"
             alt="Profile Image"
             style={profileImageStyle}
           />
