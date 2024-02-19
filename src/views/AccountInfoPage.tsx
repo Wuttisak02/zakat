@@ -6,14 +6,24 @@ import Protofile from "../inform/protofile";
 import Inform from "../inform/inform";
 import Health from "../inform/health";
 import Family from "../inform/family";
+import CareerAndFinancial from "../dialog/CareerAndFinancial";
 
-const AccountInfoPage = () => {
+const AccountInfoPage: React.FC = () => {
   const [isStrictModeOpen, setIsStrictModeOpen] = useState<boolean>(false);
   const [isTableBasicVisible, setIsTableBasicVisible] = useState<boolean>(true);
+  const [isCareerModalOpen, setIsCareerModalOpen] = useState<boolean>(false);
 
   const handleStrictModeClick = () => {
     setIsStrictModeOpen(true);
     setIsTableBasicVisible(true);
+  };
+
+  const handleCreateDoneeClick = () => {
+    setIsCareerModalOpen(true);
+  };
+
+  const handleCareerModalClose = () => {
+    setIsCareerModalOpen(false);
   };
 
   const darkGrayButtonStyle = {
@@ -62,7 +72,7 @@ const AccountInfoPage = () => {
             <Button
               variant="contained"
               style={darkGrayButtonStyle}
-              onClick={handleStrictModeClick}
+              onClick={handleCreateDoneeClick}
             >
               Create New Donee
             </Button>
@@ -71,6 +81,12 @@ const AccountInfoPage = () => {
           {isTableBasicVisible && <TableBasic />}
         </div>
       )}
+
+      {/* Create New Donee Dialog */}
+      <CareerAndFinancial
+        isVisible={isCareerModalOpen}
+        onClose={handleCareerModalClose}
+      />
     </>
   );
 };
